@@ -3,7 +3,7 @@
     include_once("config.php");
 
     $result = mysqli_query($mysqli,"SELECT * FROM student ORDER BY id DESC " );
-
+    include "search.php";
 
 ?>
 <html>
