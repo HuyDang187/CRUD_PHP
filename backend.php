@@ -8,7 +8,7 @@ if (isset($_REQUEST["term"])){
     $sql = "SELECT * FROM student WHERE name LIKE ?";
     if ($stmt = mysqli_prepare($connect,$sql)){
         mysqli_stmt_bind_param($stmt,"s",$param_term);
-        $paramterm = $_REQUEST["term"].'%';
+        $param_term = $_REQUEST["term"].'%';
         if (mysqli_stmt_execute($stmt)){
             $result = mysqli_stmt_get_result($stmt);
             if (mysqli_num_rows($result)>0){
